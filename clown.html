@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="images/archives.png" type="image/png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>perk.lol</title>
+  <link rel="stylesheet" href="main/styles.css">
+</head>
+<body>
+
+  <a href="https://discord.gg/e2Ae4K4RZA" id="discordIcon" target="_blank" title="Get in the Archives">
+    <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/discord.svg" alt="Discord Icon">
+  </a>
+  
+  <div id="snow"></div>
+  <div id="overlay" class="overlay">
+    <button id="enterButton">Enter</button>
+  </div>
+  <div id="archive">
+    <h1>Clown Archives</h1></div>
+  <div class="volume-control">
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+  </div>
+  <audio id="backgroundMusic" src="background.mp3" autoplay loop></audio>
+  <div id="topBackground"></div>
+  <div id="navbar">
+    <a href="index.html">
+        <button class="nav-button" id="archivesButton">Archives</button>
+      </a>
+      
+      <a href="clown.html">
+        <button class="nav-button" id="clownArchivesButton">Clown Archives</button>
+      </a>
+
+      <a href="vrc.html">
+        <button class="nav-button" id="clownArchivesButton">VRC Archives</button>
+      </a>
+
+      <a href="xbox.html">
+        <button class="nav-button" id="clownArchivesButton">Xbox Archives</button>
+      </a>
+
+      <a href="other.html">
+        <button class="nav-button" id="clownArchivesButton">Other Archives</button>
+      </a>
+  </div>  
+  <div id="alphabetContainer">
+    <button>A</button>
+    <button>B</button>
+    <button>C</button>
+    <button>D</button>
+    <button>E</button>
+    <button>F</button>
+    <button>G</button>
+    <button>H</button>
+    <button>I</button>
+    <button>J</button>
+    <button>K</button>
+    <button>L</button>
+    <button>M</button>
+    <button>N</button>
+    <button>O</button>
+    <button>P</button>
+    <button>Q</button>
+    <button>R</button>
+    <button>S</button>
+    <button>T</button>
+    <button>U</button>
+    <button>V</button>
+    <button>W</button>
+    <button>X</button>
+    <button>Y</button>
+    <button>Z</button>
+  </div>
+
+  <!-- Pop-up start -->
+<div id="popupMenuA" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/archives.png" alt="error" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Archives</h2>
+      <p>Website created in 2025 made to documment funny/dumb moments in com.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/archive.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuA">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up b -->
+<div id="popupMenuB" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuB">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up c -->
+<div id="popupMenuC" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuC">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up d -->
+<div id="popupMenuD" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuD">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up e -->
+<div id="popupMenuE" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuE">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up f -->
+<div id="popupMenuF" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuF">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up g -->
+<div id="popupMenuG" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuG">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up h -->
+<div id="popupMenuH" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuH">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up i -->
+<div id="popupMenuI" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuI">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up j -->
+<div id="popupMenuJ" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuJ">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up k -->
+<div id="popupMenuK" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuK">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up l -->
+<div id="popupMenuL" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuL">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up m -->
+<div id="popupMenuM" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuM">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up n -->
+<div id="popupMenuN" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuN">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up o -->
+<div id="popupMenuO" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuO">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up p -->
+<div id="popupMenuP" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuP">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up Q -->
+<div id="popupMenuQ" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuQ">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up r -->
+<div id="popupMenuR" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuR">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up s -->
+<div id="popupMenuS" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuS">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up t -->
+<div id="popupMenuT" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuT">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up u -->
+<div id="popupMenuU" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuU">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up v -->
+<div id="popupMenuV" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuV">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up w -->
+<div id="popupMenuW" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuW">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up X -->
+<div id="popupMenuX" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuX">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up Y -->
+<div id="popupMenuY" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuY">Close</button>
+  </div>
+</div>
+
+<!-- Pop-up z -->
+<div id="popupMenuZ" class="popup">
+  <div class="popupContent">
+    <div class="popupLeft">
+      <img src="images/unclaimed.png" alt="No image" class="popupImage">
+    </div>
+    <div class="popupRight">
+      <h2>Unclaimed</h2>
+      <p>Join our discord at the top left to claim.</p>
+      <video class="popupVideo" controls>
+        <source src="videos/unclaimed.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="closePopup" data-popup="popupMenuZ">Close</button>
+  </div>
+</div>
+
+<!-- end of letter list shit -->
+
+  <div id="letterContainer"></div>
+  <script src="main/main.js"></script>
+</body>
+</html>
