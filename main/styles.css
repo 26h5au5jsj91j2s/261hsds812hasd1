@@ -1,0 +1,392 @@
+/* Snow */
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 1;
+  }
+  
+  /* page */
+  body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* archive banner */
+  #topBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url('archivemain.gif');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 32, 32, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+  
+  .overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  button {
+    background-color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: lightgray;
+  }
+  
+ /* Top Right Archive */
+#archive {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  font-size: 40px;
+  color: pink;
+  font-weight: bold;
+  text-shadow: 0 0 4px #be1858;
+
+}
+
+ /* Discord link */
+#discordIcon {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out;
+}
+
+#discordIcon img {
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+}
+
+#discordIcon:hover {
+  transform: scale(1.2);
+}
+
+
+  /* Volume slider */
+.volume-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#volumeSlider {
+  -webkit-appearance: none;
+  margin-right: 50px;
+  width: 200px;
+  height: 8px;
+  background: pink;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+#volumeSlider:hover {
+  opacity: 1;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff69b4;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#volumeSlider::-webkit-slider-thumb:hover {
+  background: #ff1493;
+}
+
+  /* left list */
+#alphabetContainer {
+    position: fixed;
+    top: 50%; 
+    left: 0;
+    width: 100px;
+    height: 50%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-right: 2px solid white;
+  }
+  
+  #alphabetContainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+  
+  #alphabetContainer button {
+    background: none;
+    border: none;
+    color: pink;
+    font-size: 24px;
+    text-shadow: 0 0 4px #e280d2;
+    cursor: pointer;
+    padding: 0;
+    margin: 5px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#alphabetContainer button:hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+#alphabetContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+#alphabetContainer::-webkit-scrollbar-thumb {
+    background-color: pink;
+    border-radius: 10px;
+}
+
+#alphabetContainer::-webkit-scrollbar-track {
+    background-color: transparent;
+}  
+  /* Popup (fix this its ass) */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: pink;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  display: none;
+  z-index: 10;
+  width: 80%; /* Makes the pop-up width responsive */
+  max-width: 800px; /* Limit max width */
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Container for Left (Image) and Right (Text + Video) */
+.popupContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Left section (Image) */
+.popupLeft {
+  flex: 1;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.popupImage {
+  width: 100%; /* Make image responsive */
+  max-width: 200px; /* Limit max size */
+  height: auto;
+  border-radius: 15px; /* Rounded edges */
+  border: 2px solid white; /* White outline */
+}
+
+.popupRight {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.popupRight h2 {
+  text-shadow: 0 0 4px #000000;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popupRight p {
+  text-shadow: 0 0 4px #000000;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.popupVideo {
+  width: 100%;
+  border: 2px solid white;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+.closePopup {
+  background-color: rgb(252, 68, 190);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.closePopup:hover {
+  background-color: rgb(255, 0, 170);
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .popupContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popupLeft, .popupRight {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .popupImage {
+    max-width: 150px;
+  }
+
+  .popupRight h2 {
+    font-size: 20px;
+  }
+
+  .popupRight p {
+    font-size: 14px;
+  }
+
+  .popupVideo {
+    max-width: 100%;
+  }
+}
+  
+ /* Navbar */
+#navbar {
+    position: fixed;
+    margin-top: 20px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    gap: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+
+  .nav-button {
+    background-color: pink;
+    border: none;
+    padding: 15px 30px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    min-width: 140px;
+    text-align: center;
+  }
+  
+
+  .nav-button:hover {
+    background-color: #e280d2;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px 5px #e280d2;
+  }  
+  
+  #letterContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-right: 10px;
+    pointer-events: none;
+  }
+  
+  
+/* Right falling */
+  .letter {
+    font-size: 24px;
+    color: pink;
+    text-shadow: 0 0 4px #e280d2;
+    animation: cascade 2s linear infinite;
+  }
+  
+
+  @keyframes cascade {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }  
