@@ -66,37 +66,34 @@ document.addEventListener('DOMContentLoaded', function () {
   letterContainer.appendChild(fragment);
 });
 
+backgroundMusic.pause();
 backgroundMusic.volume = volumeSlider.value;
+
 volumeSlider.addEventListener('input', () => {
   backgroundMusic.volume = volumeSlider.value;
 });
 
-// Function to show a specific pop-up menu
 function showPopupMenu(popupId, letter) {
   const popup = document.getElementById(popupId);
   popup.style.display = "block";
 }
 
-// Function to close a specific pop-up menu
 function closePopupMenu(popupId) {
   const popup = document.getElementById(popupId);
   popup.style.display = "none";
 }
 
-// Add event listeners for A-Z buttons
 document.querySelectorAll("#alphabetContainer button").forEach((button) => {
   button.addEventListener("click", () => {
     const letter = button.textContent;
-    // Dynamically build the popup ID based on the letter clicked
     const popupId = `popupMenu${letter}`;
     showPopupMenu(popupId, letter);
   });
 });
 
-// Add event listeners for close buttons
 document.querySelectorAll(".closePopup").forEach((closeButton) => {
   closeButton.addEventListener("click", () => {
-    const popupId = closeButton.dataset.popup; // Data attribute identifies which popup to close
+    const popupId = closeButton.dataset.popup;
     closePopupMenu(popupId);
   });
 });
